@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence System</title>
+    <style>
+        body {
+            background-color: rgb(47, 47, 47); 
+            margin: 0; 
+            height: 100vh; 
+        }
+        a {
+            text-decoration: none;
+        }
+        .mainhead{
+            color: white;
+            
+            text-align: center;
+            padding: 10px;
+            font-size: 26px;
+        }
+        .options{
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
+                    position: relative;
+                    height: 100px;
+                    border: none;
+                    width: 300px;
+                    border-radius: 8px;
+                    cursor: pointer; 
+                    transition: all 0.1s ease;
+                    margin-top: 100px;
+                    margin-bottom: 100px;
+                    background-color: black;
+                    font-size: 20px;
+
+        }
+        .options-2{
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            position: relative;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer; 
+            transition: all 0.1s ease;
+            height: 100px;
+            width: 300px;
+            margin-bottom: 100px;
+            background-color: black;
+            font-size: 20px;
+
+        }
+        .options-3{
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            position: relative;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer; 
+            transition: all 0.1s ease;
+            height: 100px;
+            width: 300px;
+            background-color: black;
+            font-size: 20px;
+
+        }
+        .options-4 {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;  /* Change from relative to absolute */
+        top: 20px;  /* Adjust distance from the top */
+        right: 20px;  /* Move to the right */
+        border: none;
+        border-radius: 8px;
+        cursor: pointer; 
+        transition: all 0.1s ease;
+        height: 50px;
+        width: 150px;
+        background-color: black;
+
+    }
+
+
+        .options:hover, .options-2:hover, .options-3:hover, .options-4:hover {
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05); 
+        }
+        .options:active, .options-2:active, .options-3:active, oprtion-4:active {
+            background-color: black; 
+            transform: scale(0.95); 
+        }
+        .ptext{
+            color: white;
+            font-size: 20px;
+        }
+
+    </style>
+    <body>
+        <p class="mainhead">STUDENT ATTENDENCE</p>
+        <a href="{{ url_for('capture') }}"><button class="options">ADD STUDENT(S)</button></a>
+        <a href="{{ url_for('attendance') }}"><button class="options-2">TAKE ATTENDENCE</button></a>
+        <button onclick="startTraning()" class="options-3">TRAIN DATA</button>
+        <a href="{{ url_for('table') }}" target="_blank">
+            <button class="options-4">VIEW ATTENDENCE</button>
+        </a>
+        
+        <p class="ptext" id="status"></p>
+        <script>
+            async function startTraning() {
+                let status = document.getElementById("status");
+                status.innerText = "Traning Data.....Please Wait....It will take some time";
+                let response = await fetch("/train_model", {
+                    method: "POST"
+                });
+                let result = await response.json();
+                statusElement.innerText = result.message;
+                
+                
+            }
+        </script>
+    </body>
+</head>
