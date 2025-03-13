@@ -68,9 +68,6 @@ Ensure you have the following installed:
 - **Develop a Mobile App** for attendance tracking.
 - **Cloud Integration** for remote storage and real-time syncing.
 
-## License
-This project is licensed under the **MIT License**.
-
 ## Contributors
 - [Vishwajith Pradosh Kumar](https://github.com/VishwajithPk)
 
