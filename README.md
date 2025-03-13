@@ -70,7 +70,3 @@ Ensure you have the following installed:
 
 ## Contributors
 - [Vishwajith Pradosh Kumar](https://github.com/VishwajithPk)
-
----
-### 🚀 Contributions Welcome!
-Feel free to fork this repository, improve the project, and submit a pull request. Let's build an efficient and intelligent attendance system together!
