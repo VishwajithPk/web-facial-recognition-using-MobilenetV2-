@@ -33,15 +33,11 @@ Ensure you have the following installed:
    git clone https://github.com/your-username/face-recognition-attendance.git
    cd face-recognition-attendance
    ```
-2. **Install Dependencies**
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. **Run the Flask Server**
+2. **Run the Flask Server**
    ```sh
    python finaljoined.py
    ```
-4. **Access the Web Interface**
+3. **Access the Web Interface**
    Open your browser and go to:
    ```
    http://127.0.0.1:5000/
