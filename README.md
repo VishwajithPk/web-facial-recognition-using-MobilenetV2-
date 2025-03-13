@@ -76,7 +76,7 @@ Ensure you have the following installed:
 This project is licensed under the **MIT License**.
 
 ## Contributors
-- [Your Name](https://github.com/your-username)
+- [Vishwajith Pradosh Kumar](https://github.com/VishwajithPk)
 
 ---
 ### 🚀 Contributions Welcome!
